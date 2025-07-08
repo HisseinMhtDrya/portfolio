@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: rgb(242, 155, 155);
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: rgba(245, 180, 180, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(11, 11, 11, 0.4);
+}
+
+.logo {
+  font-size: 3rem;
+  color: brown;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: brown;
+  border-bottom: 3px solid brown;
+}
+
+
+section {
+  padding: 8rem 9% 5rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: brown;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: black;
+  padding-top: 10rem;
+}
+
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ccc;
+}
+
+span {
+  color: brown;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.home-img img {
+  width: 32vh;
+  border-radius: 50%;
+  box-shadow: 0 0 25px brown;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: brown;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #a0522d;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 2px solid brown;
+  font-size: 2rem;
+  color: white;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: brown;
+  color: black;
+}
+
+.services-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-box {
+  background: #1a1a1a;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 30rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-box i {
+  font-size: 4rem;
+  color: brown;
+  margin-bottom: 1.5rem;
+}
+
+.service-box h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-box p {
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+/* ===== SKILLS ===== */
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 2rem;
+}
+
+.skill h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #333;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: brown;
+  border-radius: 2rem;
+  animation: progressAnimation 2s ease forwards;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0;
+  }
+}
+
+/* ===== TIMELINE (Éducation + Expérience) ===== */
+.timeline {
+  max-width: 800px;
+  margin: auto;
+  border-left: 2px solid rgb(154, 40, 40);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: brown;
+  border-radius: 50%;
+  position: absolute;
+  left: -3.2rem;
+  top: 0.3rem;
+}
+
+.timeline-item h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item span {
+  font-size: 1.4rem;
+  color: #040404;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  font-size: 1.5rem;
+  color: #f8f6f6;
+}
+
+/* ===== CONTACT ===== */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  border: 1px solid brown;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+
+@media (max-width: 995px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: black;
+    border-top: 1px solid brown;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 12rem;
+  }
+
+  .home-img img {
+    width: 25vh;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
